@@ -107,8 +107,7 @@ Topics included:
 - Pandas
 - NumPy
 - Matplotlib
-- Seaborn
-- Jupyter Notebook
+  - Jupyter Notebook
 
 ---
 
