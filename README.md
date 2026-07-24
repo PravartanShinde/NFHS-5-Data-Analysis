@@ -1,36 +1,118 @@
-# NFHS-5 Data Analysis
+# 📊 Exploratory Data Analysis of NFHS-5 District-Level Health & Lifestyle Indicators
 
-## Project Overview
-
-This project presents an exploratory data analysis (EDA) of the National Family Health Survey (NFHS-5) district-level dataset. The analysis focuses on health, nutrition, and lifestyle indicators across Indian states and districts using Python.
-
-The objective is to identify regional patterns, disparities, and trends in key public health indicators through data cleaning, visualization, and statistical exploration.
-
----
-
-## Dataset Information
-
-* **Dataset:** National Family Health Survey (NFHS-5)
-* **Survey Period:** 2019–2021
-* **Coverage:** India (District-Level)
-* **Conducted By:** International Institute for Population Sciences (IIPS)
-* **Records:** 704 districts
-* **Variables:** 100+ health, nutrition, demographic, and lifestyle indicators
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
 
-## Project Objectives
+## 📖 Project Overview
 
-* Clean and preprocess the NFHS-5 dataset
-* Analyze nutrition-related indicators across India
-* Analyze lifestyle-related indicators across India
-* Compare state-level and district-level patterns
-* Identify regional disparities in public health outcomes
-* Generate data-driven insights using visualization and exploratory analysis
+This project presents an **Exploratory Data Analysis (EDA)** of the **National Family Health Survey (NFHS-5)** district-level dataset to investigate regional patterns in India's health, nutrition, and lifestyle indicators.
+
+Rather than testing predefined hypotheses, the analysis explores the dataset to uncover meaningful trends, geographic disparities, and relationships among key public health indicators through data cleaning, visualization, descriptive statistics, and correlation analysis.
+
+The project demonstrates a complete exploratory data analysis workflow using Python, from raw data preprocessing to deriving actionable insights from district-level health data.
 
 ---
 
-## Repository Structure
+## 🎯 Research Objectives
+
+- Perform comprehensive data cleaning and preprocessing of the NFHS-5 dataset.
+- Explore district-level nutrition and lifestyle indicators across India.
+- Compare health outcomes at both the state and district levels.
+- Identify regional disparities in nutrition and lifestyle indicators.
+- Investigate relationships between lifestyle and health-related variables.
+- Generate meaningful insights through visual and statistical exploratory analysis.
+
+---
+
+## 📂 Dataset Information
+
+| Attribute | Details |
+|-----------|----------|
+| **Dataset** | National Family Health Survey (NFHS-5) |
+| **Survey Period** | 2019–2021 |
+| **Coverage** | District-Level, India |
+| **Conducted By** | International Institute for Population Sciences (IIPS) |
+| **Records** | 704 Districts |
+| **Variables** | 100+ Health, Nutrition, Demographic & Lifestyle Indicators |
+
+---
+
+## 🔬 Methodology
+
+The analysis was carried out in three major stages.
+
+### 1️⃣ Data Cleaning
+
+- Standardized column names for consistency.
+- Performed missing value analysis.
+- Imputed missing values using the median where appropriate.
+- Checked for duplicate records.
+- Removed low-information columns.
+- Validated the cleaned dataset before analysis.
+
+---
+
+### 2️⃣ Lifestyle Analysis
+
+The lifestyle analysis explored behavioural health indicators across Indian districts.
+
+Topics included:
+
+- Tobacco consumption
+- Alcohol consumption
+- State-wise comparisons
+- District-wise comparisons
+- Maharashtra-focused analysis
+- Correlation analysis
+- Distribution visualizations
+
+---
+
+### 3️⃣ Nutrition Analysis
+
+The nutrition analysis investigated major nutritional health indicators across Indian districts.
+
+Topics included:
+
+- Children underweight
+- Children overweight
+- Children with anaemia
+- Women with low BMI
+- State-wise comparisons
+- District-wise comparisons
+- Maharashtra-focused analysis
+
+---
+
+## 📌 Key Findings
+
+- Identified **Nandurbar (Maharashtra)** as a high-risk district, with **57.2%** of children classified as underweight—approximately **20 percentage points higher** than the Maharashtra average (**36.8%**), highlighting substantial district-level nutritional disparities.
+
+- **Women with low BMI** exhibited considerable variation across Indian states. **Jharkhand** recorded the highest average prevalence (**26.9%**), while **Maharashtra** reported approximately **22%**, demonstrating significant regional differences in women's nutritional health.
+
+- **Mizoram** reported the highest average tobacco prevalence (**74.9%**), nearly **1.9×** the overall district-level average, indicating exceptionally high tobacco consumption compared to the rest of the country.
+
+- Correlation analysis revealed a **very weak positive relationship** between tobacco and alcohol consumption (**Pearson's r = 0.103**), suggesting that districts with higher tobacco use do not necessarily exhibit higher alcohol consumption. Alcohol consumption showed some association with mildly elevated blood pressure, while blood sugar indicators exhibited similar correlation patterns, reflecting the close relationship among metabolic health measures.
+
+---
+
+## 🛠️ Tools & Libraries
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## 📁 Repository Structure
 
 ```text
 NFHS-5-Data-Analysis
@@ -45,73 +127,32 @@ NFHS-5-Data-Analysis
 
 ---
 
-## Notebooks
+## ⚠️ Limitations
 
-### 1. Data Cleaning
-
-* Column standardization
-* Duplicate detection
-* Missing value analysis
-* Removal of low-information columns
-* Median imputation
-* Final dataset validation
-
-### 2. Lifestyle Analysis
-
-* Tobacco consumption
-* Alcohol consumption
-* State-level comparisons
-* District-level comparisons
-* Correlation analysis
-* Maharashtra-focused analysis
-
-### 3. Nutrition Analysis
-
-* Children with anaemia
-* Children underweight
-* Children overweight
-* Women with low BMI
-* State-level comparisons
-* District-level comparisons
-* Maharashtra-focused analysis
+- This project focuses on **exploratory data analysis** and does not establish causal relationships.
+- Findings are based on observational survey data collected during **NFHS-5 (2019–2021)**.
+- Statistical inference was beyond the scope of this exploratory analysis.
 
 ---
 
-## Tools and Libraries
+## 🚀 Future Work
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Jupyter Notebook
+This project focuses on exploratory analysis of district-level health indicators. Future work could extend the analysis through statistical inference by:
 
----
+- **Hypothesis Testing:** Evaluate whether observed differences in nutrition and lifestyle indicators (e.g., underweight prevalence, tobacco use, alcohol consumption, and low BMI) across states and districts are statistically significant.
 
-## Key Findings
+- **Confidence Interval Estimation:** Construct confidence intervals for key health indicators, such as the prevalence of underweight children, anaemia, tobacco consumption, and low BMI, to quantify the uncertainty around district-level estimates.
 
-* Significant variation exists across Indian districts for both nutrition and lifestyle indicators.
-* Maharashtra exhibits substantial district-level disparities across multiple health measures.
-* Several nutrition indicators show strong regional concentration patterns.
-* District-level analysis reveals insights that may be masked in state-level averages.
+- **Statistical Significance of Correlations:** Test whether the observed relationships between lifestyle factors (e.g., tobacco and alcohol consumption) and health indicators (e.g., blood pressure and blood sugar measures) are statistically significant.
+
+- **Interactive Dashboard Development:** Develop an interactive dashboard using Streamlit or Power BI to enable dynamic exploration of district-level health indicators and regional disparities.
 
 ---
 
-## Future Work
+## 👨‍💻 Author
 
-This project primarily focuses on exploratory data analysis. However, the NFHS-5 dataset offers opportunities for deeper statistical investigation.
+**Pravartan Shinde**
 
-Future work may include:
-
-- Hypothesis testing for comparing health and nutrition indicators across states and regions
-- Construction and interpretation of confidence intervals for key population parameters
-- Correlation significance testing
-- Statistical comparison of district-level and state-level outcomes
-- Regression-based modelling of health and nutrition indicators
-
-Given the richness of the dataset, numerous research questions can be formulated and addressed using statistical inference techniques to move beyond descriptive analysis and support evidence-based conclusions.
-  
-
-```
+If you found this project interesting, feel free to explore the notebooks and connect with me.
 
 
